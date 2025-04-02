@@ -1,14 +1,12 @@
 def main():
     
+    from stats import get_num_words
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    num_words = get_num_words(text)
     chars_dict = count_character_frequency(text)
     print_report(book_path, num_words, chars_dict)
 
-def get_num_words(text):
-        words = text.split()
-        return len(words)
+
         
 def count_character_frequency(text):        
         freq = {}
